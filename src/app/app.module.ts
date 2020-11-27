@@ -4,7 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 
 import {
-  
+
   EventsListComponent,
   EventThumbnailComponent,
   EventService,
@@ -71,7 +71,7 @@ let jQuery = window['$'];
     HttpClientModule
   ],
   providers: [
-    
+
     EventService,
     //ToastrService,
     { provide: TOASTR_TOKEN,useValue: toastr},
@@ -86,8 +86,8 @@ let jQuery = window['$'];
            useValue: checkDirtyState
 
     }
-  
-  
+
+
   ],
   bootstrap: [EventsAppComponent]
 })
@@ -97,5 +97,5 @@ export function checkDirtyState(component:CreateEventComponent){
      if (component.isDirty)
      return window.confirm('you have not saved this event, do you really wants to cancel?')
      return true
-  
+
 }
