@@ -8,11 +8,11 @@ import { AuthService } from './user/auth.service';
   <router-outlet></router-outlet>
   `
 })
-  
+
 export class EventsAppComponent {
-  //title = 'app';
+  title = 'app';
   constructor(private auth: AuthService){
-    
+
     }
     ngOnInit() {
       this.auth.checkAuthenticationStatus().subscribe();
